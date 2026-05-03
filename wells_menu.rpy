@@ -16,7 +16,7 @@ init 999 python:
     config.developer = True
     config.console = True
     config.rollback_enabled = True
-    config.language = "pt_br_zenpy"
+    config.language = "brazil"
     config.hard_rollback_limit = 128
     config.rollback_length  = 128
 
@@ -81,11 +81,11 @@ screen wells_menu_language():
                 label _("Idioma"):
                     text_font "DejaVuSans.ttf"
                 vbox:
-                    spacing 10
+                    spacing 2
                     $ langs = get_all_languages()
                     for lang in langs:
                         textbutton "[lang]".capitalize() action Language(None if lang=="Default" else lang)
-                null height 10
+                null height 2
                 hbox:
                     ypos 25
                     style_prefix "wells_menu_slider"
